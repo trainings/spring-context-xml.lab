@@ -6,21 +6,13 @@ import java.util.List;
 import org.shop.data.Seller;
 import org.shop.repository.SellerRepository;
 
-public class SellerMapRepository extends AbstractMapRepository<Seller> implements SellerRepository {
-
+public final class SellerMapRepository extends AbstractMapRepository<Seller> implements SellerRepository {
+    
     /* (non-Javadoc)
-     * @see org.shop.repository.SellerRepository#createSeller(org.shop.data.Seller)
+     * @see org.shop.repository.SellerRepository#createOrUpdate(org.shop.data.Seller)
      */
     @Override
-    public Long createSeller(Seller seller) {
-        return create(seller);
-    }
-
-    /* (non-Javadoc)
-     * @see org.shop.repository.SellerRepository#updateSeller(org.shop.data.Seller)
-     */
-    @Override
-    public void updateSeller(Seller seller) {
+    public void createOrUpdateSeller(Seller seller) {
         update(seller);
     }
 

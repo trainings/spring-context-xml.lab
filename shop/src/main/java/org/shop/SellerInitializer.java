@@ -1,7 +1,9 @@
 package org.shop;
 
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 import org.shop.api.SellerService;
 import org.shop.data.Seller;
@@ -15,36 +17,36 @@ public class SellerInitializer {
     private SellerService sellerService;
     
     /** The seller names. */
-    private List<String> sellerNames = Collections.emptyList();
+    private Map<Long, String> sellerNames = Collections.emptyMap();
     
     /**
      * Instantiates a new seller initializer.
      *
      * @param sellerService the seller service
      */
-    public SellerInitializer(SellerService sellerService) {
+    public SellerInitializer(Map<Long, String> sellerNames) {
         super();
-        this.sellerService = sellerService;
+        this.sellerNames = sellerNames;
     }
     
-    /**
-     * Sets the seller names list.
-     *
-     * @param sellers the new seller names
-     */
-    public void setSellerNames(List<String> sellerNames) {
-        this.sellerNames = sellerNames;
+    public void setSellerService(SellerService sellerService) {
+        this.sellerService = sellerService;
     }
 
     /**
      * Inits the sellers.
      */
     public void initSellers() {
-        for (String sellerName : sellerNames) {
+        List<Seller> sellers = new LinkedList<Seller>();
+        
+        for (Map.Entry<Long, String> entry : sellerNames.entrySet()) {
             Seller seller = new Seller();
-            seller.setName(sellerName);
+            seller.setId(entry.getKey());
+            seller.setName(entry.getValue());
             
-            sellerService.registerSeller(seller);
+            sellers.add(seller);
         }
+        
+        sellerService.importSellers(sellers);
     }
 }

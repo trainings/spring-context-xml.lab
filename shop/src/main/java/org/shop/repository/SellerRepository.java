@@ -10,21 +10,13 @@ import org.shop.data.Seller;
  * @author Dzmitry_Naskou
  */
 public interface SellerRepository {
-    
+        
     /**
-     * Creates the seller.
-     *
-     * @param seller the seller
-     * @return the seller id
-     */
-    Long createSeller(Seller seller);
-    
-    /**
-     * Update seller.
+     * Creates or update ther Seller.
      *
      * @param seller the seller
      */
-    void updateSeller(Seller seller);
+    void createOrUpdateSeller(Seller seller);
     
     /**
      * Gets the sellers.

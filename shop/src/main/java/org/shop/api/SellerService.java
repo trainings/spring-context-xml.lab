@@ -13,19 +13,11 @@ import org.shop.data.Seller;
 public interface SellerService {
     
     /**
-     * Register seller.
+     * Import sellers.
      *
-     * @param seller the seller
-     * @return the seller id
+     * @param sellers the sellers
      */
-    Long registerSeller(Seller seller);
-    
-    /**
-     * Update seller.
-     *
-     * @param seller the seller
-     */
-    void updateSeller(Seller seller);
+    void importSellers(List<Seller> sellers);
     
     /**
      * Gets the sellers.
