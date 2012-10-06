@@ -1,7 +1,6 @@
 package org.shop.data;
 
 import java.util.Date;
-import java.util.Set;
 
 /**
  * Entity of <code>Order</code> class represents the order object.
@@ -16,8 +15,6 @@ public class Order implements Entity {
     private Long id;
     
     private User user;
-    
-    private Set<Item> items;
     
     private Date createdDate;
 
@@ -39,14 +36,6 @@ public class Order implements Entity {
         this.user = user;
     }
 
-    public Set<Item> getItems() {
-        return items;
-    }
-
-    public void setItems(Set<Item> items) {
-        this.items = items;
-    }
-
     public Date getCreatedDate() {
         return createdDate;
     }
@@ -55,9 +44,6 @@ public class Order implements Entity {
         this.createdDate = createdDate;
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#hashCode()
-     */
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -65,14 +51,10 @@ public class Order implements Entity {
         result = prime * result
                 + ((createdDate == null) ? 0 : createdDate.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((items == null) ? 0 : items.hashCode());
         result = prime * result + ((user == null) ? 0 : user.hashCode());
         return result;
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#equals(java.lang.Object)
-     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -92,11 +74,6 @@ public class Order implements Entity {
                 return false;
         } else if (!id.equals(other.id))
             return false;
-        if (items == null) {
-            if (other.items != null)
-                return false;
-        } else if (!items.equals(other.items))
-            return false;
         if (user == null) {
             if (other.user != null)
                 return false;
@@ -105,11 +82,8 @@ public class Order implements Entity {
         return true;
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
-        return "Order [id=" + id + ", user=" + user + ", items=" + items + ", createdDate=" + createdDate + "]";
+        return "Order [id=" + id + ", user=" + user + ", createdDate=" + createdDate + "]";
     }
 }
