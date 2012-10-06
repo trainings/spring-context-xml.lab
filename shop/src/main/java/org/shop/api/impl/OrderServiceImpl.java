@@ -14,67 +14,67 @@ import org.shop.repository.OrderRepository;
 
 public class OrderServiceImpl implements OrderService {
 
-	private OrderRepository orderRepository;
-	
-	private ItemService itemService;
-	
-	public void setOrderRepository(OrderRepository orderRepository) {
-		this.orderRepository = orderRepository;
-	}
+    private OrderRepository orderRepository;
+    
+    private ItemService itemService;
+    
+    public void setOrderRepository(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
 
-	public void setItemService(ItemService itemService) {
-		this.itemService = itemService;
-	}
+    public void setItemService(ItemService itemService) {
+        this.itemService = itemService;
+    }
 
-	@Override
-	public Long createOrder(User user, Item... items) {
-		//create and save order object
-		Order order = new Order();
-		order.setUser(user);
-		order.setCreatedDate(new Date());
-		
-		Long orderId = orderRepository.createOrder(order);
-		
-		//save item objects
-		for (Item item : items) {
-			item.setOrder(order);
-			itemService.createItem(item);
-		}
-		
-		return orderId;
-	}
-	
-	public Long createOrder(User user, Proposal... proposals) {
-		List<Item> items = new ArrayList<Item>();
-		
-		for (Proposal proposal : proposals) {
-			Item item = new Item();
-			item.setProduct(proposal.getProduct());
-			item.setPrice(proposal.getPrice());
-			
-			items.add(item);
-		}
-		
-		return createOrder(user, items.toArray(new Item[items.size()]));
-	}
+    @Override
+    public Long createOrder(User user, Item... items) {
+        //create and save order object
+        Order order = new Order();
+        order.setUser(user);
+        order.setCreatedDate(new Date());
+        
+        Long orderId = orderRepository.createOrder(order);
+        
+        //save item objects
+        for (Item item : items) {
+            item.setOrder(order);
+            itemService.createItem(item);
+        }
+        
+        return orderId;
+    }
+    
+    public Long createOrder(User user, Proposal... proposals) {
+        List<Item> items = new ArrayList<Item>();
+        
+        for (Proposal proposal : proposals) {
+            Item item = new Item();
+            item.setProduct(proposal.getProduct());
+            item.setPrice(proposal.getPrice());
+            
+            items.add(item);
+        }
+        
+        return createOrder(user, items.toArray(new Item[items.size()]));
+    }
 
-	@Override
-	public Order getOrderById(Long id) {
-		return orderRepository.getOrderById(id);
-	}
+    @Override
+    public Order getOrderById(Long id) {
+        return orderRepository.getOrderById(id);
+    }
 
-	@Override
-	public void updateOrder(Order order) {
-		orderRepository.updateOrder(order);
-	}
+    @Override
+    public void updateOrder(Order order) {
+        orderRepository.updateOrder(order);
+    }
 
-	@Override
-	public List<Order> getOrdersByUser(User user) {
-		return getOrdersByUserId(user.getId());
-	}
+    @Override
+    public List<Order> getOrdersByUser(User user) {
+        return getOrdersByUserId(user.getId());
+    }
 
-	@Override
-	public List<Order> getOrdersByUserId(Long userId) {
-		return orderRepository.getOrdersByUserId(userId);
-	}
+    @Override
+    public List<Order> getOrdersByUserId(Long userId) {
+        return orderRepository.getOrdersByUserId(userId);
+    }
 }

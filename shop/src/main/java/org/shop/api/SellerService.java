@@ -11,34 +11,34 @@ import org.shop.data.Seller;
  *
  */
 public interface SellerService {
-	
-	/**
-	 * Register seller.
-	 *
-	 * @param seller the seller
-	 * @return the seller id
-	 */
-	Long registerSeller(Seller seller);
-	
-	/**
-	 * Update seller.
-	 *
-	 * @param seller the seller
-	 */
-	void updateSeller(Seller seller);
-	
-	/**
-	 * Gets the sellers.
-	 *
-	 * @return the sellers
-	 */
-	List<Seller> getSellers();
-	
-	/**
-	 * Gets the seller by id.
-	 *
-	 * @param sellerId the seller id
-	 * @return the seller by id
-	 */
-	Seller getSellerById(Long sellerId);
+    
+    /**
+     * Register seller.
+     *
+     * @param seller the seller
+     * @return the seller id
+     */
+    Long registerSeller(Seller seller);
+    
+    /**
+     * Update seller.
+     *
+     * @param seller the seller
+     */
+    void updateSeller(Seller seller);
+    
+    /**
+     * Gets the sellers.
+     *
+     * @return the sellers
+     */
+    List<Seller> getSellers();
+    
+    /**
+     * Gets the seller by id.
+     *
+     * @param sellerId the seller id
+     * @return the seller by id
+     */
+    Seller getSellerById(Long sellerId);
 }

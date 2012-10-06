@@ -9,7 +9,7 @@ import org.apache.commons.collections.Predicate;
 import org.shop.data.Entity;
 
 public class AbstractMapRepository<T extends Entity> {
-	private long sequence = 0;
+    private long sequence = 0;
     
     protected final Map<Long, T> register = new HashMap<Long, T>();
     
@@ -18,27 +18,27 @@ public class AbstractMapRepository<T extends Entity> {
     }
     
     protected T get(Long id) {
-    	return register.get(id);
+        return register.get(id);
     }
     
     protected Long create(T entity) {
-    	Long id = nextPk();
-    	
-    	entity.setId(id);
-    	
-    	register.put(id, entity);
-    	
-    	return id;
+        Long id = nextPk();
+        
+        entity.setId(id);
+        
+        register.put(id, entity);
+        
+        return id;
     }
     
     protected void update(T entity) {
-    	if (entity.getId() != null) {
-    		register.put(entity.getId(), entity);
-    	}
+        if (entity.getId() != null) {
+            register.put(entity.getId(), entity);
+        }
     }
     
     protected void delete(Long id) {
-    	register.remove(id);
+        register.remove(id);
     }
     
     @SuppressWarnings("unchecked")
