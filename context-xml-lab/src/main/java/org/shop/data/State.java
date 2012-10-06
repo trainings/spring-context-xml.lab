@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Entity of <code>State</code> class represents the state object.
+ * 
+ * @author Dzmitry_Naskou
+ */
 public final class State implements Entity {
 
 	private static final long serialVersionUID = -4707978480914424319L;

@@ -3,6 +3,12 @@ package org.shop.data;
 import java.util.Date;
 import java.util.Set;
 
+/**
+ * Entity of <code>Order</code> class represents the order object.
+ * 
+ * @author Dzmitry_Naskou
+ * @see Item
+ */
 public class Order implements Entity {
 
 	private static final long serialVersionUID = -1964561045551043905L;

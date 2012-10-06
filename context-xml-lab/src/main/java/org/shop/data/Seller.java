@@ -1,5 +1,10 @@
 package org.shop.data;
 
+/**
+ * Entity of <code>Seller</code> class represents the seller object.
+ * 
+ * @author Dzmitry_Naskou
+ */
 public class Seller implements Entity {
 
 	private static final long serialVersionUID = -1560210215625020278L;

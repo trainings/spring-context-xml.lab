@@ -1,5 +1,12 @@
 package org.shop.data;
 
+/**
+ * Entity of <code>Proposal</code> class represents the proposal object.
+ * 
+ * @author Dzmitry_Naskou
+ * @see Seller
+ * @see Product
+ */
 public class Proposal implements Entity {
 
 	private static final long serialVersionUID = 2419499985539985110L;
