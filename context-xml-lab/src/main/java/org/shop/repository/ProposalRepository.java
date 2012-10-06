@@ -2,7 +2,7 @@ package org.shop.repository;
 
 import java.util.List;
 
-import org.shop.model.Proposal;
+import org.shop.data.Proposal;
 
 public interface ProposalRepository {
 	

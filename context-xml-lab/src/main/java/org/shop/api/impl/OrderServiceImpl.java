@@ -5,10 +5,10 @@ import java.util.Date;
 import java.util.List;
 
 import org.shop.api.OrderService;
-import org.shop.model.Item;
-import org.shop.model.Order;
-import org.shop.model.Proposal;
-import org.shop.model.User;
+import org.shop.data.Item;
+import org.shop.data.Order;
+import org.shop.data.Proposal;
+import org.shop.data.User;
 import org.shop.repository.ItemRepository;
 import org.shop.repository.OrderRepository;
 

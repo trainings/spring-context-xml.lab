@@ -2,7 +2,7 @@ package org.shop.repository;
 
 import java.util.List;
 
-import org.shop.model.Seller;
+import org.shop.data.Seller;
 
 public interface SellerRepository {
 	

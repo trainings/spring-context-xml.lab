@@ -2,7 +2,7 @@ package org.shop.repository;
 
 import java.util.List;
 
-import org.shop.model.Item;
+import org.shop.data.Item;
 
 public interface ItemRepository {
 	

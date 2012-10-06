@@ -3,10 +3,10 @@ package org.shop.api.impl;
 import java.util.List;
 
 import org.shop.api.ProposalService;
-import org.shop.model.Product;
-import org.shop.model.Proposal;
-import org.shop.model.Seller;
-import org.shop.model.State;
+import org.shop.data.Product;
+import org.shop.data.Proposal;
+import org.shop.data.Seller;
+import org.shop.data.State;
 import org.shop.repository.ProposalRepository;
 
 public class ProposalServiceImpl implements ProposalService {

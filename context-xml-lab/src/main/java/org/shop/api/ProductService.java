@@ -2,7 +2,7 @@ package org.shop.api;
 
 import java.util.List;
 
-import org.shop.model.Product;
+import org.shop.data.Product;
 
 public interface ProductService {
 	

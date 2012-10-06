@@ -1,7 +1,7 @@
 package org.shop;
 
 import org.shop.api.ProductService;
-import org.shop.model.Product;
+import org.shop.data.Product;
 
 public class ProductInitializer {
 	

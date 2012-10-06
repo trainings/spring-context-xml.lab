@@ -3,7 +3,7 @@ package org.shop.api.impl;
 import java.util.List;
 
 import org.shop.api.SellerService;
-import org.shop.model.Seller;
+import org.shop.data.Seller;
 import org.shop.repository.SellerRepository;
 
 public class SellerServiceImpl implements SellerService {

@@ -1,7 +1,7 @@
 package org.shop;
 
 import org.shop.api.SellerService;
-import org.shop.model.Seller;
+import org.shop.data.Seller;
 
 public class SellerInitializer {
 

@@ -6,9 +6,9 @@ import java.util.Map;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.Predicate;
-import org.shop.model.ElementaryEntity;
+import org.shop.data.Entity;
 
-public class AbstractMapRepository<T extends ElementaryEntity> {
+public class AbstractMapRepository<T extends Entity> {
 	private long sequence = 0;
     
     protected final Map<Long, T> register = new HashMap<Long, T>();

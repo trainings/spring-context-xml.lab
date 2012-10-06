@@ -3,7 +3,7 @@ package org.shop.repository.map;
 import java.util.List;
 
 import org.apache.commons.collections.Predicate;
-import org.shop.model.Proposal;
+import org.shop.data.Proposal;
 import org.shop.repository.ProposalRepository;
 
 public class ProposalMapRepository extends AbstractMapRepository<Proposal> implements ProposalRepository {

@@ -2,10 +2,10 @@ package org.shop.api;
 
 import java.util.List;
 
-import org.shop.model.Item;
-import org.shop.model.Order;
-import org.shop.model.Proposal;
-import org.shop.model.User;
+import org.shop.data.Item;
+import org.shop.data.Order;
+import org.shop.data.Proposal;
+import org.shop.data.User;
 
 public interface OrderService {
 	

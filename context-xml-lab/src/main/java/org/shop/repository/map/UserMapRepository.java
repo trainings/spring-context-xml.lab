@@ -3,7 +3,7 @@ package org.shop.repository.map;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.shop.model.User;
+import org.shop.data.User;
 import org.shop.repository.UserRepository;
 
 public class UserMapRepository extends AbstractMapRepository<User> implements UserRepository {

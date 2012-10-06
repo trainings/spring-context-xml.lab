@@ -1,7 +1,7 @@
 package org.shop;
 
 import org.shop.api.UserService;
-import org.shop.model.User;
+import org.shop.data.User;
 
 public class UserInitializer {
 

@@ -2,9 +2,9 @@ package org.shop.api;
 
 import java.util.List;
 
-import org.shop.model.Product;
-import org.shop.model.Proposal;
-import org.shop.model.Seller;
+import org.shop.data.Product;
+import org.shop.data.Proposal;
+import org.shop.data.Seller;
 
 public interface ProposalService {
 	
