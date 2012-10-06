@@ -19,7 +19,8 @@ public class ProposalServiceImpl implements ProposalService {
     
     private ProductService productService;
     
-    public void setRepository(ProposalRepository repository) {
+    public ProposalServiceImpl(ProposalRepository repository) {
+        super();
         this.repository = repository;
     }
     
