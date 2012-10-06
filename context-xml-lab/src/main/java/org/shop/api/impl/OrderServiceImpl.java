@@ -4,26 +4,26 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.shop.api.ItemService;
 import org.shop.api.OrderService;
 import org.shop.data.Item;
 import org.shop.data.Order;
 import org.shop.data.Proposal;
 import org.shop.data.User;
-import org.shop.repository.ItemRepository;
 import org.shop.repository.OrderRepository;
 
 public class OrderServiceImpl implements OrderService {
 
 	private OrderRepository orderRepository;
 	
-	private ItemRepository itemRepository;
+	private ItemService itemService;
 	
 	public void setOrderRepository(OrderRepository orderRepository) {
 		this.orderRepository = orderRepository;
 	}
 
-	public void setItemRepository(ItemRepository itemRepository) {
-		this.itemRepository = itemRepository;
+	public void setItemService(ItemService itemService) {
+		this.itemService = itemService;
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class OrderServiceImpl implements OrderService {
 		//save item objects
 		for (Item item : items) {
 			item.setOrder(order);
-			itemRepository.createItem(item);
+			itemService.createItem(item);
 		}
 		
 		return orderId;
@@ -76,10 +76,5 @@ public class OrderServiceImpl implements OrderService {
 	@Override
 	public List<Order> getOrdersByUserId(Long userId) {
 		return orderRepository.getOrdersByUserId(userId);
-	}
-
-	@Override
-	public List<Item> getOrderItemsByOrderId(Long orderId) {
-		return itemRepository.getItemsByOrderId(orderId);
 	}
 }
