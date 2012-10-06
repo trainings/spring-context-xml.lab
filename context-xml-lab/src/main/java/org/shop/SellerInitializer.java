@@ -1,6 +1,8 @@
 package org.shop;
 
 import org.shop.api.SellerService;
+
+import org.shop.common.Sellers;
 import org.shop.data.Seller;
 
 public class SellerInitializer {
@@ -17,13 +19,13 @@ public class SellerInitializer {
 		
 		//create amazon.com
 		seller = new Seller();
-		seller.setName("Amazon");
+		seller.setName(Sellers.AMAZON);
 		
 		sellerService.registerSeller(seller);
 		
 		//create
 		seller = new Seller();
-		seller.setName("Samsung");
+		seller.setName(Sellers.SAMSUNG);
 		
 		sellerService.registerSeller(seller);
 	}
