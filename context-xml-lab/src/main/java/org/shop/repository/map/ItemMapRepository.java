@@ -8,16 +8,25 @@ import org.shop.repository.ItemRepository;
 
 public class ItemMapRepository extends AbstractMapRepository<Item> implements ItemRepository {
 
+	/* (non-Javadoc)
+	 * @see org.shop.repository.ItemRepository#createItem(org.shop.data.Item)
+	 */
 	@Override
 	public Long createItem(Item item) {
 		return create(item);
 	}
 
+	/* (non-Javadoc)
+	 * @see org.shop.repository.ItemRepository#deleteItem(java.lang.Long)
+	 */
 	@Override
 	public void deleteItem(Long itemId) {
 		deleteItem(itemId);
 	}
 
+	/* (non-Javadoc)
+	 * @see org.shop.repository.ItemRepository#getItemsByOrderId(java.lang.Long)
+	 */
 	@Override
 	public List<Item> getItemsByOrderId(Long orderId) {
 		return select(new ItemByOrderPredicate(orderId));

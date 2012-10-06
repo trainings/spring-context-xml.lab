@@ -8,21 +8,33 @@ import org.shop.repository.OrderRepository;
 
 public class OrderMapRepository extends AbstractMapRepository<Order> implements OrderRepository {
 
+	/* (non-Javadoc)
+	 * @see org.shop.repository.OrderRepository#getOrderById(java.lang.Long)
+	 */
 	@Override
 	public Order getOrderById(Long id) {
 		return get(id);
 	}
 
+	/* (non-Javadoc)
+	 * @see org.shop.repository.OrderRepository#createOrder(org.shop.data.Order)
+	 */
 	@Override
 	public Long createOrder(Order order) {
 		return create(order);
 	}
 
+	/* (non-Javadoc)
+	 * @see org.shop.repository.OrderRepository#updateOrder(org.shop.data.Order)
+	 */
 	@Override
 	public void updateOrder(Order order) {
 		update(order);
 	}
 
+	/* (non-Javadoc)
+	 * @see org.shop.repository.OrderRepository#getOrdersByUserId(java.lang.Long)
+	 */
 	@Override
 	public List<Order> getOrdersByUserId(Long userId) {
 		return select(new OrderByUserPredicate(userId));
