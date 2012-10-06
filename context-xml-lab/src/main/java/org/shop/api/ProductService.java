@@ -6,7 +6,7 @@ import org.shop.data.Product;
 
 public interface ProductService {
 	
-	Product getProductById(Long id);
+	Product getProductById(Long productId);
 
 	List<Product> getProducts();
 	

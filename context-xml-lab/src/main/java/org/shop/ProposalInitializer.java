@@ -27,8 +27,8 @@ public class ProposalInitializer {
 	}
 
 	public void initProposals() {
-		Seller amazon = sellerService.getSellerById((long)0);
-		Seller samsung = sellerService.getSellerById((long)1);
+		Seller amazonCorp = sellerService.getSellerById((long)0);
+		Seller samsungCorp = sellerService.getSellerById((long)1);
 		
 		Product galaxyTab = productService.getProductsByName("Samsung Galaxy Tab").get(0);
 		Product kindleFire = productService.getProductsByName("Kindle Fire").get(0);
@@ -36,11 +36,11 @@ public class ProposalInitializer {
 		Product galaxyAce = productService.getProductsByName("Samsung S5830L Galaxy Ace").get(0);
 		
 		//Samsung
-		proposalService.createProposal(samsung, galaxyAce, 250.0);
-		proposalService.createProposal(samsung, galaxyTab, 500.0);
+		proposalService.createProposal(samsungCorp.getId(), galaxyAce.getId(), 250.0);
+		proposalService.createProposal(samsungCorp.getId(), galaxyTab.getId(), 500.0);
 		
 		//Amazon
-		proposalService.createProposal(amazon, kindleFire, 199.0);
-		proposalService.createProposal(amazon, kindleTouch, 99.0);
+		proposalService.createProposal(amazonCorp.getId(), kindleFire.getId(), 199.0);
+		proposalService.createProposal(amazonCorp.getId(), kindleTouch.getId(), 99.0);
 	}
 }

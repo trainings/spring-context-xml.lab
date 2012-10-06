@@ -8,7 +8,7 @@ import org.shop.data.Seller;
 
 public interface ProposalService {
 	
-	Long createProposal(Seller seller, Product product, Double price);
+	Long createProposal(Long sellerId, Long productId, Double price);
 	
 	void deactivateProposal(Long proposalId);
 	
