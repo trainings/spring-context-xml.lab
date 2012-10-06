@@ -5,15 +5,27 @@ import org.shop.api.ProductService;
 import org.shop.common.Products;
 import org.shop.data.Product;
 
+/**
+ * The Product Initializer util class.
+ */
 public final class ProductInitializer {
 	
+	/** The product service. */
 	private ProductService productService;
 
+	/**
+	 * Instantiates a new product initializer.
+	 *
+	 * @param productService the product service
+	 */
 	public ProductInitializer(ProductService productService) {
 		super();
 		this.productService = productService;
 	}
 	
+	/**
+	 * Inits the products.
+	 */
 	public void initProducts() {
 		Product product = null;
 		

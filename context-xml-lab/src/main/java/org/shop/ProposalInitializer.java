@@ -7,27 +7,50 @@ import org.shop.api.SellerService;
 import org.shop.common.Products;
 import org.shop.data.Product;
 import org.shop.data.Seller;
-
+/**
+ * The Proposal Initializer util class.
+ */
 public class ProposalInitializer {
 	
+	/** The product service. */
 	private ProductService productService;
 	
+	/** The proposal service. */
 	private ProposalService proposalService;
 	
+	/** The seller service. */
 	private SellerService sellerService;
 	
+	/**
+	 * Sets the product service.
+	 *
+	 * @param productService the new product service
+	 */
 	public void setProductService(ProductService productService) {
 		this.productService = productService;
 	}
 
+	/**
+	 * Sets the proposal service.
+	 *
+	 * @param proposalService the new proposal service
+	 */
 	public void setProposalService(ProposalService proposalService) {
 		this.proposalService = proposalService;
 	}
 
+	/**
+	 * Sets the seller service.
+	 *
+	 * @param sellerService the new seller service
+	 */
 	public void setSellerService(SellerService sellerService) {
 		this.sellerService = sellerService;
 	}
 
+	/**
+	 * Inits the proposals.
+	 */
 	public void initProposals() {
 		Seller amazon = sellerService.getSellerById((long) 0);
 		Seller samsung = sellerService.getSellerById((long) 1);

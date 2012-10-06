@@ -8,8 +8,14 @@ import org.shop.repository.ItemRepository;
 
 public class ItemServiceImpl implements ItemService {
 	
+	/** The item repository. */
 	private ItemRepository repository;
 
+	/**
+	 * Instantiates a new item service impl.
+	 *
+	 * @param repository the item repository
+	 */
 	public ItemServiceImpl(ItemRepository repository) {
 		super();
 		this.repository = repository;
