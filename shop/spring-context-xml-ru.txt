@@ -1,22 +1,22 @@
-1. Создать конфигурационные файлы:
-	a. Для repositorу классов
-	b. Для service классов
-	c. Для data initializers классов
-2. Создать корневой (основной) конфигурационный файл, подключить файлы из п1.
-3. Реализовать bean definitions для repository классов.
-	a. Использовать атрибуты id и name (на ваш выбор) 
-	b. Для создания UserRepository использовать класс org.shop.repository.factory.UserRepositoryFactory и соответствующий factory method
-	c. Для создания OrderRepository необходимо передать параметр intitialSequence, значение которого должно быть взято из property файла.
-4. Реализовать bean definitions для service классов:
-	a. OrderService: передать необходимые параметры используя <property>
-	b. ItemService: передать необходимые параметры используя <constructor-arg>
-	c. SellerService: использовать autowiring by type
-	d. ProductService: использовать autowiring by constructor
-	e. UserService: использовать p:namespace
-	f. ProposalService: передать repository через конструктор, а остальные остальные параметры передать через соответствующий setter-метод
-5. Реализовать bean definitions для data initializer классов
-	a. SellerInitializer: требуется параметр типа Map<sellerId, sellerName>
-	b. ProposalInitializer: использовать autowiring by name
-	c. ProductInitializer: передать параметры в конструктор
-	d. DataInitializer: объявить init метод
-6. Реализовать main method для ShopLauncher класса, запустить, проверить работоспособность
+п»ї1. РЎРѕР·РґР°С‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёРѕРЅРЅС‹Рµ С„Р°Р№Р»С‹:
+	a. Р”Р»СЏ repositorСѓ РєР»Р°СЃСЃРѕРІ
+	b. Р”Р»СЏ service РєР»Р°СЃСЃРѕРІ
+	c. Р”Р»СЏ data initializers РєР»Р°СЃСЃРѕРІ
+2. РЎРѕР·РґР°С‚СЊ РєРѕСЂРЅРµРІРѕР№ (РѕСЃРЅРѕРІРЅРѕР№) РєРѕРЅС„РёРіСѓСЂР°С†РёРѕРЅРЅС‹Р№ С„Р°Р№Р», РїРѕРґРєР»СЋС‡РёС‚СЊ С„Р°Р№Р»С‹ РёР· Рї1.
+3. Р РµР°Р»РёР·РѕРІР°С‚СЊ bean definitions РґР»СЏ repository РєР»Р°СЃСЃРѕРІ.
+	a. РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°С‚СЂРёР±СѓС‚С‹ id Рё name (РЅР° РІР°С€ РІС‹Р±РѕСЂ) 
+	b. Р”Р»СЏ СЃРѕР·РґР°РЅРёСЏ UserRepository РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РєР»Р°СЃСЃ org.shop.repository.factory.UserRepositoryFactory Рё СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёР№ factory method
+	c. Р”Р»СЏ СЃРѕР·РґР°РЅРёСЏ OrderRepository РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРґР°С‚СЊ РїР°СЂР°РјРµС‚СЂ intitialSequence, Р·РЅР°С‡РµРЅРёРµ РєРѕС‚РѕСЂРѕРіРѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РІР·СЏС‚Рѕ РёР· property С„Р°Р№Р»Р°.
+4. Р РµР°Р»РёР·РѕРІР°С‚СЊ bean definitions РґР»СЏ service РєР»Р°СЃСЃРѕРІ:
+	a. OrderService: РїРµСЂРµРґР°С‚СЊ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РёСЃРїРѕР»СЊР·СѓСЏ <property>
+	b. ItemService: РїРµСЂРµРґР°С‚СЊ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РёСЃРїРѕР»СЊР·СѓСЏ <constructor-arg>
+	c. SellerService: РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ autowiring by type
+	d. ProductService: РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ autowiring by constructor
+	e. UserService: РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ p:namespace
+	f. ProposalService: РїРµСЂРµРґР°С‚СЊ repository С‡РµСЂРµР· РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ, Р° РѕСЃС‚Р°Р»СЊРЅС‹Рµ РѕСЃС‚Р°Р»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РїРµСЂРµРґР°С‚СЊ С‡РµСЂРµР· СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёР№ setter-РјРµС‚РѕРґ
+5. Р РµР°Р»РёР·РѕРІР°С‚СЊ bean definitions РґР»СЏ data initializer РєР»Р°СЃСЃРѕРІ
+	a. SellerInitializer: С‚СЂРµР±СѓРµС‚СЃСЏ РїР°СЂР°РјРµС‚СЂ С‚РёРїР° Map<sellerId, sellerName>
+	b. ProposalInitializer: РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ autowiring by name
+	c. ProductInitializer: РїРµСЂРµРґР°С‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РІ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+	d. DataInitializer: РѕР±СЉСЏРІРёС‚СЊ init РјРµС‚РѕРґ
+6. Р РµР°Р»РёР·РѕРІР°С‚СЊ main method РґР»СЏ ShopLauncher РєР»Р°СЃСЃР°, Р·Р°РїСѓСЃС‚РёС‚СЊ, РїСЂРѕРІРµСЂРёС‚СЊ СЂР°Р±РѕС‚РѕСЃРїРѕСЃРѕР±РЅРѕСЃС‚СЊ
