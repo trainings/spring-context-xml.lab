@@ -1,0 +1,22 @@
+1. —оздать конфигурационные файлы:
+	a. ƒл€ repositorу классов
+	b. ƒл€ service классов
+	c. ƒл€ data initializers классов
+2. —оздать корневой (основной) конфигурационный файл, подключить файлы из п1.
+3. –еализовать bean definitions дл€ repository классов.
+	a. »спользовать атрибуты id и name (на ваш выбор) 
+	b. ƒл€ создани€ UserRepository использовать класс org.shop.repository.factory.UserRepositoryFactory и соответствующий factory method
+	c. ƒл€ создани€ OrderRepository необходимо передать параметр intitialSequence, значение которого должно быть вз€то из property файла.
+4. –еализовать bean definitions дл€ service классов:
+	a. OrderService: передать необходимые параметры использу€ <property>
+	b. ItemService: передать необходимые параметры использу€ <constructor-arg>
+	c. SellerService: использовать autowiring by type
+	d. ProductService: использовать autowiring by constructor
+	e. UserService: использовать p:namespace
+	f. ProposalService: передать repository через конструктор, а остальные остальные параметры передать через соответствующий setter-метод
+5. –еализовать bean definitions дл€ data initializer классов
+	a. SellerInitializer: требуетс€ параметр типа Map<sellerId, sellerName>
+	b. ProposalInitializer: использовать autowiring by name
+	c. ProductInitializer: передать параметры в конструктор
+	d. DataInitializer: объ€вить init метод
+6. –еализовать main method дл€ ShopLauncher класса, запустить, проверить работоспособность
