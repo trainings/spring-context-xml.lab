@@ -13,7 +13,7 @@
 	c. SellerService: использовать autowiring by type
 	d. ProductService: использовать autowiring by constructor
 	e. UserService: использовать p:namespace
-	f. ProposalService: передать repository через конструктор, а остальные остальные параметры передать через соответствующий setter-метод
+	f. ProposalService: передать repository через конструктор, а остальные параметры передать через соответствующий setter-метод
 5. Реализовать bean definitions для data initializer классов
 	a. SellerInitializer: требуется параметр типа Map<sellerId, sellerName>
 	b. ProposalInitializer: использовать autowiring by name
