@@ -8,7 +8,7 @@ import org.shop.repository.ProductRepository;
 
 public class ProductServiceImpl implements ProductService {
 
-    private ProductRepository repository;
+    private final ProductRepository repository;
 
     public ProductServiceImpl(ProductRepository repository) {
         super();

@@ -9,7 +9,7 @@ import org.shop.repository.ItemRepository;
 public class ItemServiceImpl implements ItemService {
     
     /** The item repository. */
-    private ItemRepository repository;
+    private final ItemRepository repository;
 
     /**
      * Instantiates a new item service impl.

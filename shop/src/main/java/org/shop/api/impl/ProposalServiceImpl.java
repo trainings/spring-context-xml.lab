@@ -13,7 +13,7 @@ import org.shop.repository.ProposalRepository;
 
 public class ProposalServiceImpl implements ProposalService {
 
-    private ProposalRepository repository;
+    private final ProposalRepository repository;
     
     private SellerService sellerService;
     
